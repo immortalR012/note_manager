@@ -1,18 +1,18 @@
 from datetime import datetime
-username= input(' ведите имя')
-second_mane=input(' ведите фамилию')
+username= input('ведите имя')
+content=input('сделайте запись')
 status=input('род дейтельности')
 created_date=input('ведите дату для создания заметки')
 issue_date=input('ведите дату истечения срока заметки')
 title=input('ведите заголовок вашей заметки')
-created_date_obj=datetime.strptime(created_date," %d %m %Y")
-issue_date_obj=datetime.strptime(issue_date," %d %m %Y")
+created_date_obj=datetime.strptime(created_date,"%d %m %Y")
+issue_date_obj=datetime.strptime(issue_date,"%d %m %Y")
 morning=input('ведите время затрака')
 lunch=input('ведите время обеда')
 dinner=input('ведите время ужина')
-morning_obj=datetime.strptime(morning," %H %M %S")
-lunch_obj=datetime.strptime(lunch," %H %M %S")
-dinner_obj=datetime.strptime(dinner," %H %M %S")
+morning_obj=datetime.strptime(morning,"%H %M %S")
+lunch_obj=datetime.strptime(lunch,"%H %M %S")
+dinner_obj=datetime.strptime(dinner,"%H %M %S")
 print("дата создания",created_date_obj.day,issue_date_obj.day)
 print("дата окончания",created_date_obj.day,issue_date_obj.month)
 #print('ваша заметка '+ title)
@@ -21,7 +21,7 @@ print("дата окончания",created_date_obj.day,issue_date_obj.month)
 #print(username)
 #print(second_mane)
 #print(status)
-my_data=["имя",username,"фамилия",second_mane,"род занятий",status]
+my_data=["имя",username,"фамилия",content,"запись",status]
 my_day=[title,'завтрак ',morning,'обед',lunch,'ужин',dinner]
 my_mumber=[created_date,issue_date]
 user_titles=[my_mumber,my_data,my_day]
