@@ -1,2 +1,6 @@
-username= input("ведите ваше имя")
+username= input(' ведите имя')
+second_mane=input(' ведите фамилию')
+status=input('род дейтельности')
 print(username)
+print(second_mane)
+print(status)
