@@ -3,8 +3,8 @@ while True:
     title = input("Введите заголовок заметки (или 'стоп' для завершения): ")
     if title.lower() == "стоп":
         break
-        while True:
+    while True:
             title = input("Введите заголовок заметки (или 'стоп' для завершения): ")
 
-            if title.lower() == "стоп":
-             break
+    if title.lower() == "стоп":
+         break

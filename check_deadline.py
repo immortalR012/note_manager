@@ -6,7 +6,7 @@ def validate_date(date_str):
     try:
         return datetime.strptime(date_str, '%d %m %Y')
     except ValueError:
-        raise ValueError("Неверный формат даты! Пожалуйста, введите дату в формате ДД-ММ-ГГГГ.")
+        raise ValueError("Неверный формат даты! Пожалуйста, введите дату в формате ДД ММ ГГГГ.")
 
 
 def main():
@@ -14,7 +14,7 @@ def main():
 
     while True:
         try:
-            issue_date_str = input("Введите дату дедлайна в формате ДД-ММ-ГГГГ: ")
+            issue_date_str = input("Введите дату дедлайна в формате ДД ММ ГГГГ: ")
             issue_date = validate_date(issue_date_str)
 
             if issue_date.date() < current_date.date():
@@ -30,6 +30,3 @@ def main():
         except ValueError as e:
             print(e)
 
-
-if __name__ == "__main__":
-    main()
