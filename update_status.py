@@ -1,3 +1,5 @@
+def update_status():
+    pass
 
 username = input('Ведите имя: ')
 content = input('Сделайте запись: ')

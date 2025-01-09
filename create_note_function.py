@@ -1,4 +1,9 @@
+
+def create_note():
+    pass
+
 from datetime import datetime
+
 
 today = datetime.now()
 name = input('ведите имя')

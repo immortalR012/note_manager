@@ -1,3 +1,5 @@
+def update_note():
+    pass
 from datetime import datetime
 
 today = datetime.now()
