@@ -19,10 +19,14 @@ notes = {
     'content': content,
     'issue_date': issue_date_obj
 }
-
-with open('filename.txt','w',encoding='utf-8') as file:
+try:
+    with open('filename.txt','w',encoding='utf-8') as file:
         file.write(f"{notes}\n")
-def load_notes_from_file():
-    with open('filename.txt', 'r', encoding='utf-8'):
+    def load_notes_from_file():
+        with open('filename.txt', 'r', encoding='utf-8'):
             print(file.read())
+except FileNotFoundError:
+    print('файл не найден')
+except PermissionError:
+    print('нет доступа к файлу')
 file.close()
