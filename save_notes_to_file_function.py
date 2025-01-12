@@ -24,6 +24,5 @@ with open('filename.txt','w',encoding='utf-8') as file:
         file.write(f"{notes}\n")
 def load_notes_from_file():
     with open('filename.txt', 'r', encoding='utf-8'):
-        for f in file:
-            print(f,end='')
+            print(file.read())
 file.close()
