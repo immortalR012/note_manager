@@ -1,10 +1,8 @@
 file = open(' filename.txt','w', encoding='utf-8')
 from datetime import datetime
 
-# Получение текущей даты
 today = datetime.now().date()
 
-# Получение данных от пользователя
 name = input('Введите имя:')
 title = input('Введите заголовок:')
 content = input('Напишите заметку:')
@@ -14,16 +12,18 @@ try:
     issue_date_obj = datetime.strptime(issue_date, '%d %m %Y').date()
 except ValueError as e:
     print(f'Ошибка при вводе даты: {e}')
-    exit()  # Завершение программы при ошибке ввода даты
-
-# Создание словаря с данными заметки
+    exit()
 notes = {
     'name': name,
     'title': title,
     'content': content,
     'issue_date': issue_date_obj
 }
-while notes:
-    file.write(f"{notes}\n")
-    break
+
+with open('filename.txt','w',encoding='utf-8') as file:
+        file.write(f"{notes}\n")
+def load_notes_from_file():
+    with open('filename.txt', 'r', encoding='utf-8'):
+        for f in file:
+            print(f,end='')
 file.close()
