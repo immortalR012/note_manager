@@ -13,14 +13,14 @@ def load_data_from_file(file_path='data.json'):
         with open(file_path, 'r', encoding='utf-8') as file:
             user_data = json.load(file)
     except FileNotFoundError:
-        pass  # Если файла нет, то просто продолжаем работу без данных
+        print('файл не найден')
     except json.JSONDecodeError:
         print("Ошибка декодирования JSON. Файл может быть поврежден.")
 
 
 # Функция для сохранения данных в файл
 def save_data_to_file(file_path='data.json'):
-    with open(file_path, 'w', encoding='utf-8') as file:
+    with open(file_path, 'а', encoding='utf-8') as file:
         json.dump(user_data, file, ensure_ascii=False, indent=4)
 
 
