@@ -56,4 +56,3 @@ def create_user_data():
 new_note = create_user_data()
 user_data.append(new_note)
 save_data_to_file()
-
